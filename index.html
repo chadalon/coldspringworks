@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cold Spring Works</title>
+    <meta
+      name="description"
+      content="Cold Spring Works helps local service businesses find the places where their website and phone setup are quietly losing them booked jobs. A $99 teardown with a written fix-it list."
+    />
+    <meta property="og:title" content="Cold Spring Works" />
+    <meta
+      property="og:description"
+      content="A $99 hands-on teardown of your website and call-handling setup, and a written list of the gaps most likely costing you booked jobs."
+    />
+    <meta property="og:url" content="https://coldspringworks.com/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://coldspringworks.com/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <style>
+      :root {
+        --bg: #f7f6f3;
+        --text: #21252b;
+        --muted: #5a6169;
+        --accent: #0e5d6c;
+        --accent-ink: #ffffff;
+        --card: #edece7;
+        --border: #d9d6cf;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #16191d;
+          --text: #e8e6e1;
+          --muted: #a6abb2;
+          --accent: #7ecbd6;
+          --accent-ink: #10272b;
+          --card: #1e2329;
+          --border: #343b43;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+      header.brand,
+      footer.brand {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding: 1.5rem 1.25rem;
+      }
+      header.brand h1 {
+        font-size: 1.35rem;
+        letter-spacing: 0.01em;
+        margin: 0;
+      }
+      main {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding: 0 1.25rem 3rem;
+      }
+      section {
+        margin: 3.25rem 0;
+      }
+      h2 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 0 0 0.85rem;
+      }
+      p {
+        margin: 0 0 1rem;
+      }
+      .lead {
+        font-size: 1.15rem;
+        line-height: 1.55;
+      }
+      ul.checks {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+      ul.checks li {
+        margin: 0 0 0.85rem;
+      }
+      .plain-talk {
+        background: var(--card);
+        border-left: 4px solid var(--accent);
+        border-radius: 0 6px 6px 0;
+        padding: 1.4rem 1.4rem 0.5rem;
+        font-size: 1.05rem;
+      }
+      .plain-talk h2 {
+        margin-top: 0;
+      }
+      .price {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+      }
+      .cta {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--accent-ink);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.05rem;
+        padding: 0.9rem 1.6rem;
+        border-radius: 6px;
+        margin: 0.25rem 0 1rem;
+      }
+      .cta:hover {
+        filter: brightness(1.1);
+      }
+      a {
+        color: var(--accent);
+      }
+      :focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .email-plain {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      footer.brand {
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-top: 1rem;
+      }
+      footer.brand p {
+        margin: 0.25rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="brand">
+      <h1>Cold Spring Works</h1>
+    </header>
+
+    <main>
+      <section aria-label="What we do">
+        <p class="lead">
+          Cold Spring Works helps local service businesses — plumbers, HVAC,
+          electricians, roofers, and similar trades — find the places where
+          their website and phone setup are quietly losing them booked jobs.
+        </p>
+        <p>
+          Most of these problems are small, specific, and invisible from the
+          inside. We look for them the way a customer would: by using your site
+          and calling your number. Then we write down what we find.
+        </p>
+      </section>
+
+      <section aria-labelledby="look-at">
+        <h2 id="look-at">What we actually look at</h2>
+        <ul class="checks">
+          <li>
+            Whether a &ldquo;request a call back&rdquo; actually reaches a
+            person, and how long that takes.
+          </li>
+          <li>
+            Whether someone on a phone can reach you in one tap, or has to
+            pinch, zoom, and hunt for a number.
+          </li>
+          <li>
+            Whether your phone number is tappable, or just text sitting in a
+            header image where a thumb can't use it.
+          </li>
+          <li>
+            What happens to a form submission after &ldquo;send&rdquo; — where
+            it goes, and whether anyone answers it.
+          </li>
+          <li>
+            Contact paths that dead-end: broken links, forms that error out,
+            pages that 404.
+          </li>
+          <li>
+            What a caller hears when nobody picks up, and whether it gives them
+            a reason to wait or a reason to call the next company on the list.
+          </li>
+          <li>
+            How fast your site loads on a phone on a cell connection, and what a
+            visitor sees while they wait.
+          </li>
+          <li>
+            Whether someone visiting after hours is told what to expect, or left
+            guessing.
+          </li>
+        </ul>
+      </section>
+
+      <section class="plain-talk" aria-labelledby="cant-tell">
+        <h2 id="cant-tell">What we can't tell you</h2>
+        <p>
+          We can't see your call logs, so we won't claim to hand you an exact
+          count of missed calls or a dollar figure for what they cost you. That
+          would be a guess dressed up as data, and we don't want to sell you
+          something we can't back up.
+        </p>
+        <p>
+          What we can do is point out the concrete, observable gaps in your site
+          and phone flow — things we found by using them the way a customer
+          would — and let you decide what's worth fixing.
+        </p>
+      </section>
+
+      <section aria-labelledby="offer">
+        <h2 id="offer">What you get, and what it costs</h2>
+        <p class="price">$99</p>
+        <p>
+          A hands-on teardown of your website and call-handling setup, and a
+          short, specific list of the gaps most likely costing you booked jobs.
+          You get the written fix-it list within a week.
+        </p>
+        <p>
+          No software to install. No contract. What you do with the list is up
+          to you — fix things yourself, hand it to whoever runs your website, or
+          ignore it.
+        </p>
+      </section>
+
+      <section aria-labelledby="who">
+        <h2 id="who">Who you're dealing with</h2>
+        <p>
+          Cold Spring Works is a small operation founded by
+          <a
+            href="https://linkedin.com/in/chadmalmrose"
+            target="_blank"
+            rel="noopener"
+            >Chad Malmrose</a
+          >. If you email, Chad is likely the one who answers.
+        </p>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">Get the teardown</h2>
+        <p>
+          Email your business name and website address, and you'll get a reply
+          with the next step. No call required.
+        </p>
+        <p>
+          <a
+            class="cta"
+            href="mailto:contact@coldspringworks.com?subject=Teardown%20request"
+            >Email Cold Spring Works</a
+          >
+        </p>
+        <p class="email-plain">
+          Or write to us directly: contact@coldspringworks.com
+        </p>
+      </section>
+    </main>
+
+    <footer class="brand">
+      <p>coldspringworks.com</p>
+      <p>&copy; 2026 Cold Spring Works &middot; contact@coldspringworks.com</p>
+    </footer>
+  </body>
+</html>
