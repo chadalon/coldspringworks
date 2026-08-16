@@ -7,6 +7,7 @@ build step, no framework, no JavaScript, no external requests.
 
 - `index.html` — the entire site, styles inline
 - `favicon.svg` — favicon
+- `og-image.png` — link-preview image referenced by the Open Graph tags
 - `CNAME` — custom domain for GitHub Pages
 
 ## Copyright
