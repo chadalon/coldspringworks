@@ -1,281 +1,623 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cold Spring Works</title>
-    <meta
-      name="description"
-      content="Cold Spring Works helps local service businesses find the places where their website and phone setup are quietly losing them booked jobs. A $99 teardown with a written fix-it list."
-    />
-    <meta property="og:title" content="Cold Spring Works" />
-    <meta
-      property="og:description"
-      content="A $99 hands-on teardown of your website and call-handling setup, and a written list of the gaps most likely costing you booked jobs."
-    />
-    <meta property="og:url" content="https://coldspringworks.com/" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://coldspringworks.com/og-image.png"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <style>
-      :root {
-        --bg: #f7f6f3;
-        --text: #21252b;
-        --muted: #5a6169;
-        --accent: #0e5d6c;
-        --accent-ink: #ffffff;
-        --card: #edece7;
-        --border: #d9d6cf;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #16191d;
-          --text: #e8e6e1;
-          --muted: #a6abb2;
-          --accent: #7ecbd6;
-          --accent-ink: #10272b;
-          --card: #1e2329;
-          --border: #343b43;
-        }
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family:
-          system-ui,
-          -apple-system,
-          "Segoe UI",
-          Roboto,
-          Helvetica,
-          Arial,
-          sans-serif;
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-      header.brand,
-      footer.brand {
-        max-width: 42rem;
-        margin: 0 auto;
-        padding: 1.5rem 1.25rem;
-      }
-      header.brand h1 {
-        font-size: 1.35rem;
-        letter-spacing: 0.01em;
-        margin: 0;
-      }
-      main {
-        max-width: 42rem;
-        margin: 0 auto;
-        padding: 0 1.25rem 3rem;
-      }
-      section {
-        margin: 3.25rem 0;
-      }
-      h2 {
-        font-size: 1.4rem;
-        font-weight: 700;
-        line-height: 1.3;
-        margin: 0 0 0.85rem;
-      }
-      p {
-        margin: 0 0 1rem;
-      }
-      .lead {
-        font-size: 1.15rem;
-        line-height: 1.55;
-      }
-      ul.checks {
-        margin: 0;
-        padding-left: 1.25rem;
-      }
-      ul.checks li {
-        margin: 0 0 0.85rem;
-      }
-      .plain-talk {
-        background: var(--card);
-        border-left: 4px solid var(--accent);
-        border-radius: 0 6px 6px 0;
-        padding: 1.4rem 1.4rem 0.5rem;
-        font-size: 1.05rem;
-      }
-      .plain-talk h2 {
-        margin-top: 0;
-      }
-      .price {
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin: 0 0 0.5rem;
-      }
-      .cta {
-        display: inline-block;
-        background: var(--accent);
-        color: var(--accent-ink);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1.05rem;
-        padding: 0.9rem 1.6rem;
-        border-radius: 6px;
-        margin: 0.25rem 0 1rem;
-      }
-      .cta:hover {
-        filter: brightness(1.1);
-      }
-      a {
-        color: var(--accent);
-      }
-      :focus-visible {
-        outline: 3px solid var(--accent);
-        outline-offset: 2px;
-      }
-      .email-plain {
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-      footer.brand {
-        border-top: 1px solid var(--border);
-        color: var(--muted);
-        font-size: 0.9rem;
-        margin-top: 1rem;
-      }
-      footer.brand p {
-        margin: 0.25rem 0;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="brand">
-      <h1>Cold Spring Works</h1>
-    </header>
+<title>Cold Spring Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+/>
 
-    <main>
-      <section aria-label="What we do">
-        <p class="lead">
-          Cold Spring Works helps local service businesses — plumbers, HVAC,
-          electricians, roofers, and similar trades — find the places where
-          their website and phone setup are quietly losing them booked jobs.
-        </p>
+<style>
+  :root {
+    --ground: #f7f8f7;
+    --surface: #ffffff;
+    --ink: #141f1e;
+    --muted: #5c6b69;
+    --rule: #d6dedb;
+    --accent: #2f6f66;
+    --accent-quiet: #eaf1ef;
+    --accent-rule: #b9d0cb;
+
+    --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --s--1: 0.8125rem;
+    --s-0: 1.0625rem;
+    --s-1: 1.3125rem;
+    --s-2: 1.75rem;
+    --s-3: 2.375rem;
+
+    --measure: 34rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0f1514;
+      --surface: #151d1b;
+      --ink: #e7edea;
+      --muted: #93a29f;
+      --rule: #26312f;
+      --accent: #74b7ab;
+      --accent-quiet: #182624;
+      --accent-rule: #2e4b46;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0f1514;
+    --surface: #151d1b;
+    --ink: #e7edea;
+    --muted: #93a29f;
+    --rule: #26312f;
+    --accent: #74b7ab;
+    --accent-quiet: #182624;
+    --accent-rule: #2e4b46;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: var(--s-0);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5rem) 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 7vw, 4.5rem);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    line-height: 1.16;
+    text-wrap: balance;
+    margin: 0;
+    letter-spacing: -0.011em;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: var(--s--1);
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---- masthead ---- */
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .wordmark {
+    font-family: var(--sans);
+    font-size: var(--s-1);
+    font-weight: 700;
+    letter-spacing: 0.005em;
+  }
+
+  .tagline {
+    color: var(--muted);
+    font-size: var(--s-0);
+  }
+
+  /* ---- thesis ---- */
+
+  .thesis {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .thesis h1 {
+    font-size: var(--s-3);
+  }
+
+  .thesis p {
+    color: var(--ink);
+  }
+
+  .finding {
+    font-family: var(--mono);
+    font-size: var(--s--1);
+    line-height: 1.6;
+    background: var(--accent-quiet);
+    border-left: 2px solid var(--accent);
+    padding: 1rem 1.125rem;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .finding .src {
+    color: var(--muted);
+  }
+
+  /* ---- terms row ---- */
+
+  .terms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1.25rem 1.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .term dt {
+    font-family: var(--sans);
+    font-size: var(--s--1);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+
+  .term dd {
+    margin: 0;
+    font-size: var(--s--1);
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ---- teardowns ---- */
+
+  .section-head {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-head h2 {
+    font-size: var(--s-2);
+  }
+
+  .section-head p {
+    color: var(--muted);
+  }
+
+  .teardowns {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .teardown {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    padding: 1.75rem 1.5rem;
+  }
+
+  .teardown-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .teardown-head h3 {
+    font-size: var(--s-1);
+  }
+
+  .price {
+    font-family: var(--mono);
+    font-size: var(--s-0);
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .checks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: var(--s--1);
+  }
+
+  .checks li {
+    padding-left: 1.1rem;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .checks li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 0.4rem;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .cant {
+    font-family: var(--mono);
+    font-size: var(--s--1);
+    line-height: 1.55;
+    background: var(--accent-quiet);
+    border: 1px dashed var(--accent-rule);
+    padding: 0.875rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .cant-label {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-size: 0.75rem;
+  }
+
+  .cant p:last-child {
+    color: var(--muted);
+  }
+
+  /* ---- sample ---- */
+
+  .sample {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .report {
+    font-family: var(--mono);
+    font-size: var(--s--1);
+    line-height: 1.65;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    padding: 1.5rem;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .report-line {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .report .verdict {
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .report .note {
+    color: var(--muted);
+  }
+
+  .report hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 0;
+  }
+
+  /* ---- about + contact ---- */
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .about h2 {
+    font-size: var(--s-2);
+  }
+
+  .contact-line {
+    font-family: var(--sans);
+    font-size: var(--s-1);
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+  }
+
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  footer {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <p class="wordmark">Cold Spring Works</p>
+    <p class="tagline">
+      We find what is quietly broken on your own website, and write down exactly
+      what to fix.
+    </p>
+  </header>
+
+  <section class="thesis">
+    <h1>Most of what costs you customers never announces itself.</h1>
+
+    <div class="finding">
+      <p>
+        2 of 3 affiliate links checked on a live product review &mdash; a post
+        the site had updated as recently as last year &mdash; sent readers to a
+        merchant error page instead of the product.
+      </p>
+      <p class="src">
+        Neither the reader nor the owner saw an error. The clicks simply stopped
+        earning.
+      </p>
+    </div>
+
+    <p>
+      A contact form that silently fails. A phone number that is not tappable on
+      a phone. A link pointing at a merchant that stopped paying two years ago.
+      From the inside, everything looks fine, because from the inside nothing is
+      ever tested the way a customer meets it.
+    </p>
+
+    <p>
+      Cold Spring Works checks from the outside, the way a customer would, and
+      hands you a short written list of what we found and what to do about it.
+    </p>
+  </section>
+
+  <dl class="terms">
+    <div class="term">
+      <dt>Fixed price</dt>
+      <dd>
+        Stated up front, on this page. No retainer and no ongoing commitment.
+      </dd>
+    </div>
+    <div class="term">
+      <dt>No access</dt>
+      <dd>We never ask for logins, admin accounts, or anything private.</dd>
+    </div>
+    <div class="term">
+      <dt>Written, not a call</dt>
+      <dd>
+        You get a document you can act on or forward. A meeting is optional.
+      </dd>
+    </div>
+  </dl>
+
+  <section>
+    <div class="section-head">
+      <h2>Three teardowns</h2>
+      <p>
+        Each one is a fixed-price inspection of a different surface. Each one
+        says plainly what it cannot determine from the outside.
+      </p>
+    </div>
+
+    <div class="teardowns">
+      <article class="teardown">
+        <p class="eyebrow">For local service businesses</p>
+        <div class="teardown-head">
+          <h3>Website &amp; call handling</h3>
+          <p class="price">$99</p>
+        </div>
         <p>
-          Most of these problems are small, specific, and invisible from the
-          inside. We look for them the way a customer would: by using your site
-          and calling your number. Then we write down what we find.
+          We contact your business the way a customer with a job to book would,
+          and record where the path breaks.
         </p>
-      </section>
+        <ul class="checks">
+          <li>Callback and contact forms that submit but never arrive</li>
+          <li>Phone numbers that are not tappable, or embedded in an image</li>
+          <li>
+            Broken links, form errors, and 404 pages on the paths customers use
+          </li>
+          <li>Voicemail that leaves a caller guessing what happens next</li>
+          <li>Mobile load speed on a cellular connection, not office wi-fi</li>
+          <li>What a customer reaches after hours</li>
+        </ul>
+        <div class="cant">
+          <p class="cant-label">What we cannot see</p>
+          <p>
+            Your call logs. So we will not hand you a count of missed calls or a
+            dollar figure for what they cost &mdash; only the specific places a
+            customer is dropped.
+          </p>
+        </div>
+      </article>
 
-      <section aria-labelledby="look-at">
-        <h2 id="look-at">What we actually look at</h2>
+      <article class="teardown">
+        <p class="eyebrow">For niche publishers and affiliate sites</p>
+        <div class="teardown-head">
+          <h3>Affiliate link teardown</h3>
+          <p class="price">$49&ndash;$99</p>
+        </div>
+        <p>
+          Affiliate links rot silently. Merchants leave networks, programs
+          change hands, and old links keep returning a page that earns nothing.
+        </p>
+        <ul class="checks">
+          <li>Every outbound affiliate link on your top-earning posts</li>
+          <li>Where each link actually lands a reader today</li>
+          <li>Links redirecting to a merchant that no longer pays you</li>
+          <li>Links orphaned when a network dropped a merchant</li>
+          <li>Which live program to re-point each broken link at</li>
+        </ul>
+        <div class="cant">
+          <p class="cant-label">What we cannot see</p>
+          <p>
+            Your affiliate dashboards. So we will not estimate lost commission
+            &mdash; only which links are broken, where they now go, and what to
+            replace them with.
+          </p>
+        </div>
+      </article>
+
+      <article class="teardown">
+        <p class="eyebrow">For independent online stores</p>
+        <div class="teardown-head">
+          <h3>Post-purchase messaging</h3>
+          <p class="price">$99</p>
+        </div>
+        <p>
+          We read your storefront as a first-time buyer, then write the messages
+          the buying moment is missing &mdash; ready to paste, not a strategy
+          deck.
+        </p>
         <ul class="checks">
           <li>
-            Whether a &ldquo;request a call back&rdquo; actually reaches a
-            person, and how long that takes.
+            What your signup box actually promises, and when it pays that off
           </li>
+          <li>The cart your customer left, and what reaches them afterwards</li>
           <li>
-            Whether someone on a phone can reach you in one tap, or has to
-            pinch, zoom, and hunt for a number.
+            Shipping and delivery reassurance, including when something goes
+            wrong
           </li>
+          <li>When and how you ask for a review</li>
+          <li>The message that earns a second order</li>
           <li>
-            Whether your phone number is tappable, or just text sitting in a
-            header image where a thumb can't use it.
-          </li>
-          <li>
-            What happens to a form submission after &ldquo;send&rdquo; — where
-            it goes, and whether anyone answers it.
-          </li>
-          <li>
-            Contact paths that dead-end: broken links, forms that error out,
-            pages that 404.
-          </li>
-          <li>
-            What a caller hears when nobody picks up, and whether it gives them
-            a reason to wait or a reason to call the next company on the list.
-          </li>
-          <li>
-            How fast your site loads on a phone on a cell connection, and what a
-            visitor sees while they wait.
-          </li>
-          <li>
-            Whether someone visiting after hours is told what to expect, or left
-            guessing.
+            All four messages written out, plus the observations behind each
           </li>
         </ul>
-      </section>
+        <div class="cant">
+          <p class="cant-label">What we cannot see</p>
+          <p>
+            Your email metrics. So we will not promise an open rate, a
+            conversion lift, or recovered revenue &mdash; only the gaps visible
+            on your own storefront, and the copy that closes them.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
 
-      <section class="plain-talk" aria-labelledby="cant-tell">
-        <h2 id="cant-tell">What we can't tell you</h2>
-        <p>
-          We can't see your call logs, so we won't claim to hand you an exact
-          count of missed calls or a dollar figure for what they cost you. That
-          would be a guess dressed up as data, and we don't want to sell you
-          something we can't back up.
-        </p>
-        <p>
-          What we can do is point out the concrete, observable gaps in your site
-          and phone flow — things we found by using them the way a customer
-          would — and let you decide what's worth fixing.
-        </p>
-      </section>
+  <section class="sample">
+    <div class="section-head">
+      <h2>What a finding looks like</h2>
+      <p>
+        An excerpt from a recent affiliate link teardown, with the site
+        anonymised.
+      </p>
+    </div>
 
-      <section aria-labelledby="offer">
-        <h2 id="offer">What you get, and what it costs</h2>
-        <p class="price">$99</p>
-        <p>
-          A hands-on teardown of your website and call-handling setup, and a
-          short, specific list of the gaps most likely costing you booked jobs.
-          You get the written fix-it list within a week.
+    <div class="report">
+      <div class="report-line">
+        <p>Link 1 &mdash; men&rsquo;s boot, &ldquo;Buy at REI&rdquo;</p>
+        <p class="verdict">DEAD</p>
+        <p class="note">
+          Redirects to the affiliate network&rsquo;s error page: &ldquo;we no
+          longer advertise for REI.com.&rdquo; The page then lists ten unrelated
+          merchants, none selling the reviewed boot.
         </p>
-        <p>
-          No software to install. No contract. What you do with the list is up
-          to you — fix things yourself, hand it to whoever runs your website, or
-          ignore it.
+      </div>
+      <hr />
+      <div class="report-line">
+        <p>Link 2 &mdash; second boot, same post</p>
+        <p class="verdict">DEAD</p>
+        <p class="note">
+          Identical failure. Two of three checked links funnel to the same
+          broken redirect, so this is a pattern from one merchant change, not a
+          one-off.
         </p>
-      </section>
+      </div>
+      <hr />
+      <div class="report-line">
+        <p>Link 3 &mdash; low-top, same post</p>
+        <p class="verdict">INCONCLUSIVE</p>
+        <p class="note">
+          The request failed outright. Could be a removed link or an
+          automated-request block. Not counted as dead, and flagged for a second
+          check by hand.
+        </p>
+      </div>
+      <hr />
+      <div class="report-line">
+        <p class="verdict">LIMITS OF THIS SAMPLE</p>
+        <p class="note">
+          Three links on one post. Enough to show the pattern, not enough to
+          claim a site-wide rate. Both dead links trace to the same dropped
+          merchant, which may be one event rather than general rot.
+        </p>
+      </div>
+    </div>
 
-      <section aria-labelledby="who">
-        <h2 id="who">Who you're dealing with</h2>
-        <p>
-          Cold Spring Works is a small operation founded by
-          <a
-            href="https://linkedin.com/in/chadmalmrose"
-            target="_blank"
-            rel="noopener"
-            >Chad Malmrose</a
-          >. We work remotely — the whole teardown is done through your public
-          website and phone number, the same way a customer reaches you. If you
-          email, Chad is likely the one who answers.
-        </p>
-      </section>
+    <p>
+      The last block is not an afterthought. Every teardown ends with what the
+      sample does not prove, because a finding you cannot check is not worth
+      paying for.
+    </p>
+  </section>
 
-      <section aria-labelledby="contact">
-        <h2 id="contact">Get the teardown</h2>
-        <p>
-          Email your business name and website address, and you'll get a reply
-          with the next step. No call required.
-        </p>
-        <p>
-          <a
-            class="cta"
-            href="mailto:contact@coldspringworks.com?subject=Teardown%20request"
-            >Email Cold Spring Works</a
-          >
-        </p>
-        <p class="email-plain">
-          Or write to us directly: contact@coldspringworks.com
-        </p>
-      </section>
-    </main>
+  <section class="about">
+    <h2>Who you would be working with</h2>
+    <p>
+      Cold Spring Works is a one-person shop run by Chad Malmrose. Every
+      teardown is read and written up by hand before it reaches you, and priced
+      the same for everyone.
+    </p>
+    <p>
+      Send your business name and your website address. You will get a reply
+      describing what the teardown would cover for you &mdash; and what it would
+      not &mdash; before you decide anything.
+    </p>
+    <p class="contact-line">
+      <a href="mailto:chad@coldspringworks.com">chad@coldspringworks.com</a>
+    </p>
+  </section>
 
-    <footer class="brand">
-      <p>coldspringworks.com</p>
-      <p>&copy; 2026 Cold Spring Works &middot; contact@coldspringworks.com</p>
-    </footer>
-  </body>
-</html>
+  <footer>
+    &copy; 2026 Cold Spring Works &middot; chad@coldspringworks.com
+  </footer>
+</div>
